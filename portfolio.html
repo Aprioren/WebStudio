@@ -15,42 +15,75 @@
     crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" 
     rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/index.min.css">
     <title>Portfolio</title>
 </head>
 <!-- header -->
 <body>
     <header class="header"> 
-        <div class=".container container--of-header">
-            <nav class="main-nav"> 
-                <!-- logo -->
-                <a href="./index.html" class="logo logo__header">
-                <span class="logo__label">Web</span>Studio
-                </a>
-                <!--main-nav-->
-                <ul class="list-of-nav">
-                    <li class="list-of-nav__item"><a class="list-of-nav__links" href="./index.html">Студия</a></li>
-                    <li class="list-of-nav__item"><a class="list-of-nav__links list-of-nav__links--current-page" href="./portfolio.html">Портфолио</a></li>
-                    <li class="list-of-nav__item"><a class="list-of-nav__links" href="">Контакты</a></li>
-                </ul>
-            </nav>
-            <ul class="list-of-contact">
-                <li class="list-of-contact__item"> 
-                    <a class="list-of-contact__link"  href="mailto:info@devstudio.com">info@devstudio.com
-                        <svg class="list-of-contact__icon-mail">
-                            <use href="./images/icons/sprite.svg#icon-mail"></use>
-                        </svg>
-                    </a>    
-                </li>
-                <li class="list-of-contact__item">
-                    <a class="list-of-contact__link" href="tel:+380961111111">+3 8096 111 11 11 
-                    <svg class="list-of-contact__icon-phone">
-                        <use href="./images/icons/sprite.svg#icon-phone"></use>
-                    </svg>             
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <div class="container">
+                <div class="mobile-container">
+                    <a href="./index.html" class="logo logo__header">
+                        <span class="logo__label">Web</span>Studio
+                        </a> 
+                        
+                            <button class="mobile-menu__button" 
+                            type="button" 
+                            aria-controls="mobile-menu-container" 
+                            aria-expanded="false"
+                            data-menu-button 
+                            >
+                                <svg class="mobile-menu__icons" 
+                                width="40px" 
+                                height="40px" 
+                                aria-label="Переключатель мобильного меню">
+                                    <use class="mobile-menu__icon-burger" href="./images/icons/second_sprite.svg#icon-menu_mobile" ></use>
+                                    <use class="mobile-menu__icon-cross" href="./images/icons/second_sprite.svg#icon-close_mobile" ></use>
+                                </svg>
+                            </button>
+                        
+                        <!--main-nav-->
+                        <div class="mobile-menu-container" data-menu>
+                            <nav class="main-nav "> 
+                                <ul class="list-of-nav">
+                                    <li class="list-of-nav__item"><a class="list-of-nav__links list-of-nav__links--current-page" href="./index.html">Студия</a></li>
+                                    <li class="list-of-nav__item"><a class="list-of-nav__links" href="./portfolio.html">Портфолио</a></li>
+                                    <li class="list-of-nav__item"><a class="list-of-nav__links" href="">Контакты</a></li>
+                                </ul>
+                            </nav>
+                            <ul class="list-of-contact">
+                                <li class="list-of-contact__item"> 
+                                    <a class="list-of-contact__link"  href="mailto:info@devstudio.com">info@devstudio.com
+                                        <svg class="list-of-contact__icon-mail">
+                                            <use href="./images/icons/sprite.svg#icon-mail"></use>
+                                        </svg>
+                                    </a>    
+                                </li>
+                                <li class="list-of-contact__item">
+                                    <a class="list-of-contact__link" href="tel:+380961111111">+3 8096 111 11 11 
+                                    <svg class="list-of-contact__icon-phone">
+                                        <use href="./images/icons/sprite.svg#icon-phone"></use>
+                                    </svg>             
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="mobile-menu-socialmedia">
+                                <li class="mobile-menu-socialmedia__item">
+                                    <a href="#" class="mobile-menu-socialmedia__link">Instagram</a>
+                                </li>
+                                <li class="mobile-menu-socialmedia__item">
+                                    <a href="#" class="mobile-menu-socialmedia__link">Twitter</a>
+                                </li>
+                                <li class="mobile-menu-socialmedia__item">
+                                    <a href="#" class="mobile-menu-socialmedia__link">Facebook</a>
+                                </li>
+                                <li class="mobile-menu-socialmedia__item">
+                                    <a href="#" class="mobile-menu-socialmedia__link">LinkedIn</a>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+        </div> 
     </header>
     <!-- main -->
     <main>
@@ -76,7 +109,20 @@
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
                 </p>
             </div>
-            <img src="./images/portfolio/variables_of_propositions/tecno.jpg" alt="Технокряк" width="370px">
+            <picture> 
+                <source 
+                srcset="./images/portfolio/variables_of_propositions/tecno_mobile.jpg 1x,
+                ./images/portfolio/variables_of_propositions/tecno_tablet.jpg 1x, 
+                ./images/portfolio/variables_of_propositions/tecno@2x_mobile.jpg 2x,
+                ./images/portfolio/variables_of_propositions/tecno@2x_tablet.jpg 2x,
+                " type="image/jpeg">
+                <img src="./images/portfolio/variables_of_propositions/tecno.jpg"
+                srcset="./images/portfolio/variables_of_propositions/tecno@2x_desktop.jpg 2x"
+                sizes="(max-width: 600px) 450px, 
+                (max-width: 900px) 354px ,
+                370px"
+                alt="Технокряк">
+            </picture>
         </div>
             <div class="list-of-projects__container">
                 <h2 class="list-of-projects__title">Технокряк</h2>
@@ -90,7 +136,20 @@
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
                 </p>
             </div>
-                <img src="./images/portfolio/variables_of_propositions/poster.jpg" alt="Постер New Orlean vs Golden Star" width="370px">
+            <picture> 
+                <source 
+                srcset="./images/portfolio/variables_of_propositions/poster_mobile.jpg 1x,
+                ./images/portfolio/variables_of_propositions/poster_tablet.jpg 1x,
+                ./images/portfolio/variables_of_propositions/poster@2x_tablet.jpg 2x,
+                ./images/portfolio/variables_of_propositions/poster@2x_mobile.jpg 2x"
+                type="image/jpeg">
+                <img src="./images/portfolio/variables_of_propositions/poster.jpg"
+                srcset="./images/portfolio/variables_of_propositions/poster@2x_desktop.jpg 2x"
+                sizes="(max-width: 600px) 450px, 
+                (max-width: 900px) 354px ,
+                370px" 
+                alt="Постер New Orlean vs Golden Star">
+            </picture>
             </div>
             <div class="list-of-projects__container">
                 <h2 class="list-of-projects__title">Постер New Orlean vs Golden Star</h2>
@@ -104,7 +163,20 @@
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
                 </p>
             </div>
-            <img src="./images/portfolio/variables_of_propositions/restoraunt.jpg" alt="Ресторан Seafood" width="370px">
+            <picture> 
+                <source 
+                srcset="./images/portfolio/variables_of_propositions/restoraunt_mobile.jpg 1x,
+                ./images/portfolio/variables_of_propositions/restoraunt_tablet.jpg 1x
+                ./images/portfolio/variables_of_propositions/restoraunt@2x_tablet.jpg 2x,
+                ./images/portfolio/variables_of_propositions/restoraunt@2x_mobile.jpg 2x,"
+                type="image/jpeg">
+                <img src="./images/portfolio/variables_of_propositions/restoraunt.jpg"
+                srcset="./images/portfolio/variables_of_propositions/restoraunt@2x_desktop.jpg 2x" 
+                sizes="(max-width: 600px) 450px, 
+                (max-width: 900px) 354px ,
+                370px"
+                alt="Ресторан Seafood">
+            </picture>
         </div>
         <div class="list-of-projects__container">
             <h2 class="list-of-projects__title">Ресторан Seafood</h2>
@@ -118,7 +190,19 @@
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
                 </p>
             </div>
-            <img src="./images/portfolio/variables_of_propositions/project_prime.jpg" alt="Проект Prime" width="370px">
+            <picture>
+                <source srcset="./images/portfolio/variables_of_propositions/project_prime_mobile.jpg 1x,
+                ./images/portfolio/variables_of_propositions/project_prime_tablet.jpg 1x,
+                ./images/portfolio/variables_of_propositions/project_prime@2x_mobile.jpg 2x,
+                ./images/portfolio/variables_of_propositions/project_prime@2x_tablet.jpg 2x"
+                type="image/jpeg">
+                <img srcset="./images/portfolio/variables_of_propositions/project_prime@2x_desktop.jpg 2x"
+                src="./images/portfolio/variables_of_propositions/project_prime.jpg"
+                sizes="(max-width: 600px) 450px, 
+                (max-width: 900px) 354px ,
+                370px" 
+                alt="Проект Prime">
+            </picture>
         </div>
             
         <div class="list-of-projects__container">
@@ -133,7 +217,19 @@
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
                 </p>
             </div>
-            <img src="./images/portfolio/variables_of_propositions/project_boxes.jpg" alt="Проект Boxes" width="370px">
+        <picture>
+            <source srcset="./images/portfolio/variables_of_propositions/project_boxes_mobile.jpg 1x,
+            ./images/portfolio/variables_of_propositions/project_boxes_tablet.jpg 1x,
+            ./images/portfolio/variables_of_propositions/project_boxes@2x_mobile.jpg 2x,
+            ./images/portfolio/variables_of_propositions/project_boxes@2x_tablet.jpg 2x," 
+            type="image/jpeg">
+            <img srcset="./images/portfolio/variables_of_propositions/project_boxes@2x_desktop.jpg 2x"
+            src="./images/portfolio/variables_of_propositions/project_boxes.jpg"
+            sizes="(max-width: 600px) 450px, 
+            (max-width: 900px) 354px ,
+            370px"
+            alt="Проект Boxes">
+        </picture>
         </div>
         <div class="list-of-projects__container">
             <h2 class="list-of-projects__title">Проект Boxes</h2>
@@ -147,7 +243,19 @@
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
                 </p>
             </div>
-            <img src="./images/portfolio/variables_of_propositions/inspiration.jpg" alt="Inspiration has no Borders">
+            <picture>
+                <source srcset="./images/portfolio/variables_of_propositions/inspiration_mobile.jpg 1x,
+                ./images/portfolio/variables_of_propositions/inspiration_tablet.jpg 1x,
+                ./images/portfolio/variables_of_propositions/inspiration@2x_mobile.jpg 2x,
+                ./images/portfolio/variables_of_propositions/inspiration@2x_tablet.jpg 2x"
+                type="image/jpeg">
+                <img srcset="./images/portfolio/variables_of_propositions/inspiration.jpg"
+                src="./images/portfolio/variables_of_propositions/inspiration@2x_desktop.jpg 2x"
+                sizes="(max-width: 600px) 450px, 
+                (max-width: 900px) 354px ,
+                370px"
+                alt="Inspiration has no Borders">
+            </picture>
         </div>
         <div class="list-of-projects__container">
             <h2 class="list-of-projects__title">Inspiration has no Borders</h2>
@@ -161,7 +269,19 @@
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
                 </p>
             </div>
-            <img src="./images/portfolio/variables_of_propositions/limited_edition.jpg" alt="Издание Limited Edition">
+            <picture>
+                <source srcset="./images/portfolio/variables_of_propositions/limited_edition_mobile.jpg 1x,
+                ./images/portfolio/variables_of_propositions/limited_edition_tablet.jpg 1x,
+                ./images/portfolio/variables_of_propositions/limited_edition@2x_mobile.jpg 2x,
+                ./images/portfolio/variables_of_propositions/limited_edition@2x_tablet.jpg 2x," 
+                type="image/jpeg">
+                <img srcset="./images/portfolio/variables_of_propositions/limited_edition@2x_desktop.jpg 2x"
+                src="./images/portfolio/variables_of_propositions/limited_edition.jpg"
+                sizes="(max-width: 600px) 450px, 
+                (max-width: 900px) 354px ,
+                370px" 
+                alt="Издание Limited Edition">
+        </picture>
         </div>
         <div class="list-of-projects__container">
             <h2 class="list-of-projects__title">Издание Limited Edition</h2>
@@ -175,7 +295,19 @@
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
                 </p>
             </div>
-            <img src="./images/portfolio/variables_of_propositions/project_lab.jpg" alt="Проект LAB">
+            <picture>
+                <source srcset="./images/portfolio/variables_of_propositions/project_lab_mobile.jpg 1x,
+                ./images/portfolio/variables_of_propositions/project_lab_tablet.jpg 1x,
+                ./images/portfolio/variables_of_propositions/project_lab@2x_mobile.jpg 2x,
+                ./images/portfolio/variables_of_propositions/project_lab@2x_tablet.jpg 2x,"
+                type="image/jpeg">
+                <img srcset="./images/portfolio/variables_of_propositions/poster@2x_desktop.jpg 2x"
+                src="./images/portfolio/variables_of_propositions/project_lab.jpg" 
+                sizes="(max-width: 600px) 450px, 
+                (max-width: 900px) 354px ,
+                370px"
+                alt="Проект LAB">
+            </picture>
         </div>
         <div class="list-of-projects__container">
             <h2 class="list-of-projects__title">Проект LAB</h2>
@@ -189,7 +321,19 @@
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
                 </p>
             </div>
-            <img src="./images/portfolio/variables_of_propositions/growing_buisness.jpg" alt="Growing Business">
+            <picture>
+                <source srcset="./images/portfolio/variables_of_propositions/growing_buisness_mobile.jpg 1x,
+                ./images/portfolio/variables_of_propositions/growing_buisness_tablet.jpg 1x,
+                ./images/portfolio/variables_of_propositions/growing_buisness@2x_mobile.jpg 2x,
+                ./images/portfolio/variables_of_propositions/growing_buisness@2x_tablet.jpg 2x,"
+                type="image/jpeg">
+                <img srcset="./images/portfolio/variables_of_propositions/growing_buisness@2x_desktop.jpg 2x"
+                src="./images/portfolio/variables_of_propositions/growing_buisness.jpg" 
+                sizes="(max-width: 600px) 450px, 
+                (max-width: 900px) 354px ,
+                370px"
+                alt="Growing Business">
+            </picture>
         </div>
        <div class="list-of-projects__container">
             <h2 class="list-of-projects__title">Growing Business</h2>
@@ -209,7 +353,7 @@
                 </a>
                 <address>
                     <ul class="footer-nav__list">
-                        <li class="footer-nav__item"><a class="footer-nav__link  map-link" href="https://goo.gl/maps/K5L1UCEUp2EXPLnL6" target="_blank" rel="noopener noreferrer">г. Киев, пр-т Леси Украинки, 26</a></li>
+                        <li class="footer-nav__item"><a class="footer-nav__link  footer__map-link" href="https://goo.gl/maps/K5L1UCEUp2EXPLnL6" target="_blank" rel="noopener noreferrer">г. Киев, пр-т Леси Украинки, 26</a></li>
                         <li class="footer-nav__item"><a class="footer-nav__link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
                         <li class="footer-nav__item"><a class="footer-nav__link" href="tel:+380961111111">+3 8096 111 11 11 </a></li>
                     </ul>
@@ -246,7 +390,6 @@
                                 </a>
                             </li>
                         </ul>
-    
             </div>
             <div class="submit-field">
                 <form class="footer-submit-form">
@@ -256,7 +399,7 @@
                     </label>
                     <button class="footer-submit-form__button" type="submit">Подписаться 
                         <svg class="footer-submit-form__icon">
-                            <use class="footer-submit-form__send" href="./images/icons/sprite.svg#icon-send" width="24" height="24"></use>
+                            <use class="footer-submit-form__send" href="./images/icons/second_sprite.svg#icon-icon_send" width="24" height="24"></use>
                         </svg>
                     </button>
                 </form>
@@ -264,5 +407,7 @@
         </div>
     </footer>
 </div>
+<script src="./js/mobile-menu.js">
+</script>
 </body>
 </html>

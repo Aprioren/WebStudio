@@ -1,7 +1,11 @@
 .our-team{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and(min-width: 900px) {    
     padding-top: 94px;
     padding-bottom: 94px;
     background-color: $card-background-color;
+    }
 }
 
 .our-team__title{
@@ -12,14 +16,30 @@
 
     margin-top: 0px;
     margin-bottom: 50px;
+
+    @media screen and (max-width: 785px) {
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+    }
 }
 
 .our-team__list{
-    display: flex;
+    display: block;
     list-style: none;
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
+    @media(min-width:768px) and (max-width: 1199px){
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+    @media(min-width: 1200px){
+        display: flex;
+    }
 }
 
 .our-team__item{
@@ -28,9 +48,15 @@
      0px 1px 1px rgba(0, 0, 0, 0.14), 
      0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-    
-    &:not(:first-child){
-    margin-left: 30px;
+
+    @media screen and(min-width: 768px) and (max-width: 1199px){
+        margin: 15px;
+        
+    }
+    @media(min-width: 1200px){
+        &:not(:first-child){
+            margin-left: 30px;
+            }
     }
 }
 
