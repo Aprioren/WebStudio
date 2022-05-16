@@ -62,7 +62,6 @@
 .mobile-menu-socialmedia{
     @media (max-width: 767px){
         display: flex;
-        // justify-content: space-between;
         align-items:center ;
         list-style: none;
         padding: 0;
@@ -87,9 +86,6 @@ margin-left: 20px;
 
     &.is-open{
         z-index: 30;
-        // position: absolute;
-        // top: 21px;
-        // right: 25px;
     }
     &.is-open .mobile-menu__icon-burger{
         display: none;
@@ -108,10 +104,6 @@ margin-left: 20px;
     }
 }
 .mobile-menu__icons{    
-    // position: absolute;
-    // top:50%;
-    // right: 50%;
-    // transform: translate(-50%, -50%);
     width: 40px;
     height: 40px;
     fill: currentColor;
