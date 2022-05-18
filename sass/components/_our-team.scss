@@ -1,29 +1,29 @@
 .our-team{
     padding-top: 60px;
     padding-bottom: 60px;
-    
+    background-color: $card-background-color;
+
     @media screen and(min-width: 900px) {    
     padding-top: 94px;
     padding-bottom: 94px;
-    background-color: $card-background-color;
     }
 }
 
 .our-team__title{
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-
-    margin-top: 0px;
-    margin-bottom: 50px;
-
-    @media screen and (max-width: 768px) {
     font-size: 28px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
     margin-bottom: 30px;
+    margin-top: 0px;
+
+    @media(min-width: 1200px){
+        
+        margin-bottom: 50px;
+
+        font-size: 36px;
+        line-height: 1.16;
     }
 }
 
@@ -49,6 +49,11 @@
      0px 1px 1px rgba(0, 0, 0, 0.14), 
      0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    @media(max-width: 767px){
+        &:not(:last-child){
+           margin-bottom: 30px;
+        }
+    }
 
     @media screen and(min-width: 768px) and (max-width: 1199px){
         margin: 15px;

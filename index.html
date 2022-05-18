@@ -181,14 +181,16 @@
     <h2 class="our-team__title">Наша команда</h2>
     <ul class="list our-team__list">
         <li class="our-team__item">
-            <img 
-            srcset="./images/photos_of_team/igor_demyanenko_mobile.jpg 450w, ./images/photos_of_team/igor_demyanenko_tablet.jpg 354w"
-            src="./images/photos_of_team/igor_demyanenko.jpg"
-            alt="Игорь Демьяненко"
-            sizes="(max-width: 600px) 450px, 
-            (max-width: 900px) 354px ,
-            270px"
-            >
+            <picture>
+                    <source srcset="./images/photos_of_team/igor_demyanenko.jpg 1x,
+                    ./images/photos_of_team/igor_demyanenko@2x_desktop.jpg 2x"  media="(min-width: 1200px)" type="image/jpeg">
+                    <source srcset="./images/photos_of_team/igor_demyanenko_tablet.jpg,
+                    ./images/photos_of_team/igor_demyanenko@2x_tablet.jpg " media="(min-width: 768px)" type="image/jpeg">
+                    <source srcset="./images/photos_of_team/igor_demyanenko_mobile.jpg 1x,
+                    ./images/photos_of_team/igor_demyanenko@2x_mobile.jpg 2x" media="(max-width: 767px)" type="image/jpeg">
+                <img src="./images/photos_of_team/igor_demyanenko.jpg"
+                alt="Игорь Демьяненко">
+            </picture>
             <div class="our-team__container">
                 <h3 class="our-team__article">Игорь Демьяненко</h3>
                 <p class="our-team__text">Product Designer</p>
@@ -224,13 +226,16 @@
             </div> 
         </li>  
         <li class="our-team__item">
-            <img srcset="./images/photos_of_team/olga_repina_mobile.jpg 450w,
-            ./images/photos_of_team/olga_repina_tablet.jpg 354w"
-            src="./images/photos_of_team/olga_repina.jpg"
-            sizes="(max-width: 600px) 450px, 
-            (max-width: 900px) 354px ,
-            270px"
-            alt="Ольга Репина" >
+            <picture>
+                <source srcset="./images/photos_of_team/olga_repina.jpg 1x,
+                ./images/photos_of_team/olga_repina@2x_desktop.jpg 2x" media="(min-width: 1200px)" type="image/jpeg">
+                <source srcset="./images/photos_of_team/olga_repina_tablet.jpg 1x,
+                ./images/photos_of_team/olga_repina@2x_tablet.jpg 2x" media="(min-width: 768px)" type="image/jpeg">
+                <source srcset="./images/photos_of_team/olga_repina_mobile.jpg 1x,
+                ./images/photos_of_team/olga_repina@2x_mobile.jpg 2x" media="(max-width: 767px)" type="image/jpeg">
+                <img src="./images/photos_of_team/olga_repina.jpg"
+                alt="Ольга Репина" >
+            </picture>
             <div class="our-team__container">
                 <h3 class="our-team__article">Ольга Репина</h3>
                 <p class="our-team__text">Frontend Developer</p>
@@ -266,13 +271,16 @@
             </div>
         </li>
         <li class="our-team__item">
-            <img srcset="./images/photos_of_team/nikolay_tarasov_mobile.jpg 450w,
-            ./images/photos_of_team/nikolay_tarasov_tablet.jpg 354w"
-            src="./images/photos_of_team/nikolay_tarasov.jpg"
-            sizes="(max-width: 600px) 450px, 
-            (max-width: 900px) 354px ,
-            270px"
-            alt="Николай Тарасов">
+            <picture>
+                <source srcset="./images/photos_of_team/nikolay_tarasov.jpg 1x,
+                ./images/photos_of_team/nikolay_tarasov@2x_desktop.jpg 2x" media="(min-width: 1200px)" type="image/jpeg">
+                <source srcset="./images/photos_of_team/nikolay_tarasov_tablet.jpg 1x,
+                ./images/photos_of_team/nikolay_tarasov@2x_tablet.jpg 2x" media="(min-width: 768px)" type="image/jpeg">
+                <source srcset="./images/photos_of_team/nikolay_tarasov_mobile.jpg 1x,
+                ./images/photos_of_team/nikolay_tarasov_mobile@2x_mobile.jpg 2x" media="(max-width: 767px)" type="image/jpeg">
+                <img src="./images/photos_of_team/nikolay_tarasov.jpg"
+                alt="Николай Тарасов">
+            </picture>
             <div class="our-team__container">
                 <h3 class="our-team__article">Николай Тарасов</h3>
                 <p class="our-team__text">Marketing</p>
@@ -308,13 +316,16 @@
             </div>
         </li>
         <li class="our-team__item">
-            <img srcset="./images/photos_of_team/mixail_ermakov_mobile.jpg 450w,
-            ./images/photos_of_team/mixail_ermakov_tablet.jpg 354w"
-            src="./images/photos_of_team/mixail_ermakov.jpg"
-            sizes="(max-width: 600px) 450px, 
-            (max-width: 900px) 354px ,
-            270px" 
-            alt="Михаил Ермаков">
+            <picture>
+                <source srcset="./images/photos_of_team/mixail_ermakov.jpg 1x,
+                ./images/photos_of_team/mixail_ermakov@2x_desktop.jpg 2x" media="(min-width: 1200px)" type="image/jpeg">
+                <source srcset="./images/photos_of_team/mixail_ermakov_tablet.jpg 1x,
+                ./images/photos_of_team/mixail_ermakov@2x_tablet.jpg 2x" media="(min-width: 768px)" type="image/jpeg">
+                <source srcset="./images/photos_of_team/mixail_ermakov_mobile.jpg 1x,
+                ./images/photos_of_team/mixail_ermakov_mobile@2x_mobile.jpg 2x" media="(max-width: 767px)" type="image/jpeg">
+                <img src="./images/photos_of_team/mixail_ermakov.jpg"
+                alt="Михаил Ермаков">
+            </picture>
             <div class="our-team__container">
                 <h3 class="our-team__article">Михаил Ермаков</h3>
                 <p class="our-team__text">UI Designer</p>

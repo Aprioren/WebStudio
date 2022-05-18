@@ -71,7 +71,6 @@
 }
 
 .advantages__article{
-    text-align: center;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -81,11 +80,17 @@
     margin-bottom: 10px;
 
     color: $primary-text-color;
+
+    @media(max-width: 767px){
+        text-align: center;
+    }
+    
     @media (min-width: 480px)and (max-width: 1199px){
     min-width: 270px;
     min-height: 16px;
     letter-spacing: 0.03em;
     }
+    
 }
 .advantages__text{
     font-size: 14px;
@@ -94,7 +99,9 @@
     margin-top: 0px;
     margin-bottom: 30px;
 
-    @media(min-width: 480px){
+    color: $secondary-text-color;
+
+    @media(min-width: 480px) and (max-width: 1199px){
         margin-bottom: 0;
     }
 }
