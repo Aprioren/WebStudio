@@ -9,8 +9,7 @@
 }
 .mobile-container{
     @media(max-width: 767px){
-       padding-top: 16px;
-       padding-bottom: 16px;
+       height: 60px;
     }
     @media(min-width:325px){
         display: flex;
@@ -81,6 +80,7 @@ margin-left: 20px;
 .mobile-menu__button{
     border: none;
     background-color: transparent;
+    padding: 0;
 
     &.is-open{
         z-index: 30;
@@ -208,9 +208,9 @@ margin-left: 20px;
 
 .list-of-contact__link{
     font-weight: 500;
-    font-size: 34px;
-    line-height: 1.17;
     letter-spacing: 0.02em;
+    font-size: 24px;
+    line-height: 1.16;
     color: $secondary-text-color;
     text-decoration: none;
 
@@ -233,6 +233,12 @@ margin-left: 20px;
         padding-top: 32px;
         padding-bottom: 32px;
     }
+}
+.list-of-contact__link-phone{
+    @media(max-width: 767px){
+    font-size: 34px;
+    line-height: 1.17;
+    } 
 }
 
 .list-of-nav__links--current-page{
