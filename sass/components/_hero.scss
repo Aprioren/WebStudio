@@ -8,14 +8,14 @@
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    width: 480px;
+    max-width: 1600px;
     height: 400px;
    
     background-image:
     linear-gradient(to right, $gradient-hero-color, $gradient-hero-color),
     url(../images/hero-background_mobile.jpg);
     background-repeat: no-repeat;
-    background-size: 480px 400px;
+    background-size: cover;
     background-position: center;
     z-index: 1;
 
@@ -26,12 +26,10 @@
     url(../images/hero-background@2x_mobile.jpg);
     }
     @media(min-width: 768px){
-        width: 768px;
-        height: 400px;
         background-image:
         linear-gradient(to right, $gradient-hero-color, $gradient-hero-color),
         url(../images/hero-background_tablet.jpg);
-        background-size: 768px 400px;
+        background-size: cover;
         background-position: center;
         @media(min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -43,13 +41,12 @@
         }
     }
     @media (min-width: 1200px){
-        width: 1200px;
         height: 600px;
         background-image:
         linear-gradient(to right, $gradient-hero-color, $gradient-hero-color),
         url(../images/hero-background.jpg);
         background-position: center;
-        background-size: 1200px 600px;
+        background-size: cover;
         @media(min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx){
@@ -95,7 +92,7 @@
     line-height: 1.8;
     letter-spacing: 0.06em;
 
-    color: $background-color-body;
+    color: $primary-white-color;
     background-color: $acent-color;
 
     transition: color 250ms $animation-time,
@@ -104,7 +101,7 @@
         &:hover,
         &:focus{
         color: $acent-color;
-        background-color: $background-color-body;
+        background-color: $primary-white-color;
         }
 
 }

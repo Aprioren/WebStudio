@@ -23,8 +23,8 @@
     }
 }
 
-.list-of-buttons__items:not(:first-child){
-    margin-left: 8px;
+.list-of-buttons__items:not(:last-child){
+    margin-right: 8px;
     @media(max-width: 767px){
         margin-bottom: 15px;
     }
@@ -67,6 +67,7 @@
 
     list-style: none;
     padding: 0;
+    margin: 0;
 
     flex-wrap: wrap;
     @media(min-width:768px) and (max-width: 1199px){
@@ -81,10 +82,14 @@
 .list-of-projects__item{
     position: relative;
     max-width: 450px;
-    margin-bottom: 30px;
 
     border: 1px solid $border-color;
     transition: box-shadow 250ms $animation-time;
+    @media(max-width: 767px){
+        &:not(:last-child){
+            margin-bottom: 30px;
+        }
+    }
 
     @media(min-width:768px) and (max-width: 1199px){   
         max-width: 354px;
