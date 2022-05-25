@@ -17,6 +17,7 @@
 
     @media(max-width:767px){
         flex-wrap: wrap;
+       
     }
     @media(min-width: 768px){
         justify-content: center;
@@ -28,6 +29,16 @@
     @media(max-width: 767px){
         margin-bottom: 15px;
     }
+    @media(min-width: 768px){
+        margin-left: 8px;
+    }
+}
+
+.list-of-buttons__items:not(:last-child){
+    @media(max-width:767px){
+        margin-right: 8px;
+    }
+    
 }
 .list-of-buttons__nav-buttons{
     cursor: pointer;
@@ -64,12 +75,12 @@
 
 .list-of-projects{
     display: flex;
-
+    flex-wrap: wrap;
+    
     list-style: none;
     padding: 0;
     margin: 0;
 
-    flex-wrap: wrap;
     @media(min-width:768px) and (max-width: 1199px){
         margin: -15px;
     }

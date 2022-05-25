@@ -25,6 +25,11 @@
     }
 }
 .advantages__item{
+    @media(max-width: 767px){
+        &:not(:last-child){
+        margin-bottom: 30px;
+        }
+    }
     @media (min-width: 480px)and(max-width: 767px) {
             width: 450px;
     }
