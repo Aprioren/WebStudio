@@ -253,6 +253,8 @@
 }
 .list-of-contact__link--mobile-color{
     @media(max-width: 767px){
+        font-size: 34px;
+        line-height: 1.17;
         color: $acent-color;
     }
 }

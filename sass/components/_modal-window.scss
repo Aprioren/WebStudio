@@ -22,8 +22,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    min-width: 450px;
-    min-height: 609px;
+    max-width: 450px;
+    max-height: 609px;
     padding: 40px;
 
     background-color: $primary-white-color;
@@ -35,7 +35,6 @@
     @media(min-width: 1200px){
         max-width: 528px;
         max-height: 581px;
-        padding: 15px;
     }
 }
 
